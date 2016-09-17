@@ -12,6 +12,6 @@ which causes bytes to be lost.
 The errors can be fixed by freeing the allocated memory after it is done being
 used. In is_clean, cleaned needs to be cleared before a result is returned
 because cleaned is pointing to the allocated memory. However we only want to
-free clear if it is not an empty string, that would be freeing memory that was
+free cleaned if it is not an empty string, that would be freeing memory that was
 never allocated.
 
